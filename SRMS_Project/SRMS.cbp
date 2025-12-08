@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="SRMS" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/SRMS" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-lcomdlg32" />
+					<Add option="-lole32" />
+					<Add option="-luuid" />
+					<Add option="-lcomctl32" />
+					<Add library="comctl32" />
+					<Add library="uxtheme" />
+					<Add library="comdlg32" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/SRMS" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lcomdlg32" />
+					<Add option="-lole32" />
+					<Add option="-luuid" />
+					<Add option="-lcomctl32" />
+					<Add library="comctl32" />
+					<Add library="uxtheme" />
+					<Add library="comdlg32" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+		</Linker>
+		<Unit filename="README.md" />
+		<Unit filename="assets/app_logo.png" />
+		<Unit filename="assets/icons.ico" />
+		<Unit filename="data/activity.log" />
+		<Unit filename="data/settings.ini" />
+		<Unit filename="data/students.csv" />
+		<Unit filename="data/users.cfg" />
+		<Unit filename="docs/SRMS_Report.docx" />
+		<Unit filename="docs/architecture.png" />
+		<Unit filename="docs/usecase.pdf" />
+		<Unit filename="gui/AboutDialog.cpp" />
+		<Unit filename="gui/AboutDialog.h" />
+		<Unit filename="gui/AddStudentWindow.cpp" />
+		<Unit filename="gui/AddStudentWindow.h" />
+		<Unit filename="gui/EditStudentWindow.cpp" />
+		<Unit filename="gui/EditStudentWindow.h" />
+		<Unit filename="gui/LoginWindow.cpp" />
+		<Unit filename="gui/LoginWindow.h" />
+		<Unit filename="gui/MainWindow.cpp" />
+		<Unit filename="gui/MainWindow.h" />
+		<Unit filename="gui/app.manifest" />
+		<Unit filename="gui/resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="include/Config.h" />
+		<Unit filename="include/DataManager.h" />
+		<Unit filename="include/Logger.h" />
+		<Unit filename="include/Student.h" />
+		<Unit filename="include/Validator.h" />
+		<Unit filename="include/resource.h" />
+		<Unit filename="src/Config.cpp" />
+		<Unit filename="src/DataManager.cpp" />
+		<Unit filename="src/Logger.cpp" />
+		<Unit filename="src/SampleDataGen.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="src/Student.cpp" />
+		<Unit filename="src/Validator.cpp" />
+		<Unit filename="src/main.cpp" />
+		<Unit filename="tools/compact.cpp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

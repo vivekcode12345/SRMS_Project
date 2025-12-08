@@ -1,0 +1,109 @@
+#include "../include/resource.h"
+#include <windows.h>
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// LOGIN DIALOG
+//
+IDD_LOGIN DIALOGEX 0, 0, 260, 120
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "SRMS - Login"
+FONT 15, "MS Shell Dlg"
+BEGIN
+    LTEXT           "Username:", -1, 12, 14, 50, 12
+    EDITTEXT        IDC_EDIT_USER, 70, 12, 170, 14, ES_AUTOHSCROLL
+    LTEXT           "Password:", -1, 12, 36, 50, 12
+    EDITTEXT        IDC_EDIT_PASS, 70, 36, 170, 14, ES_PASSWORD
+    PUSHBUTTON      "Login", IDC_BTN_LOGIN, 100, 70, 60, 18
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// MAIN DIALOG
+//
+IDD_MAIN DIALOGEX 0, 0, 480, 320
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_MINIMIZEBOX
+CAPTION "SRMS - Main"
+FONT 15, "MS Shell Dlg"
+BEGIN
+    PUSHBUTTON "Add Student", IDC_BTN_ADD, 10, 10, 90, 24
+    PUSHBUTTON "Edit Student", IDC_BTN_EDIT, 110, 10, 90, 24
+    PUSHBUTTON "Delete Student", IDC_BTN_DELETE, 210, 10, 100, 24
+    PUSHBUTTON "Import CSV", IDC_BTN_IMPORT, 320, 10, 80, 24
+    PUSHBUTTON "Export CSV", IDC_BTN_EXPORT, 320, 40, 80, 24
+    PUSHBUTTON "About", IDC_BTN_ABOUT, 410, 10, 60, 24
+    PUSHBUTTON "Exit", IDC_BTN_EXIT, 410, 40, 60, 24
+
+    LTEXT "Students list (CSV-backed):", -1, 10, 70, 200, 12
+    LTEXT "Use Add/Edit/Delete to manage. Double-click row to edit (future).", -1, 10, 85, 450, 12
+
+    // We'll use simple text area placeholder for now
+    LTEXT "Students list (CSV-backed):", -1, 10, 70, 200, 12
+    LTEXT "Use Add/Edit/Delete to manage. Double-click row to edit (future).", -1, 10, 85, 450, 12
+
+
+
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// ADD DIALOG
+//
+IDD_ADD DIALOGEX 0, 0, 300, 170
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Student"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "Roll:", -1, 10, 10, 40, 12
+    EDITTEXT IDC_ADD_ROLL, 60, 10, 220, 14, ES_AUTOHSCROLL
+    LTEXT "Name:", -1, 10, 32, 40, 12
+    EDITTEXT IDC_ADD_NAME, 60, 32, 220, 14, ES_AUTOHSCROLL
+    LTEXT "Branch:", -1, 10, 54, 40, 12
+    EDITTEXT IDC_ADD_BRANCH, 60, 54, 220, 14, ES_AUTOHSCROLL
+    LTEXT "Year:", -1, 10, 76, 40, 12
+    EDITTEXT IDC_ADD_YEAR, 60, 76, 60, 14, ES_AUTOHSCROLL
+    LTEXT "CGPA:", -1, 130, 76, 40, 12
+    EDITTEXT IDC_ADD_CGPA, 170, 76, 110, 14, ES_AUTOHSCROLL
+    PUSHBUTTON "Save", IDC_ADD_SAVE, 70, 110, 60, 20
+    PUSHBUTTON "Cancel", IDC_ADD_CANCEL, 150, 110, 60, 20
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// EDIT DIALOG (similar to ADD)
+//
+IDD_EDIT DIALOGEX 0, 0, 320, 180
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Edit Student"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "ID:", -1, 10, 10, 20, 12
+    LTEXT "", IDC_EDIT_ID, 40, 10, 40, 12
+    LTEXT "Roll:", -1, 10, 30, 40, 12
+    EDITTEXT IDC_EDIT_ROLL, 60, 30, 220, 14, ES_AUTOHSCROLL
+    LTEXT "Name:", -1, 10, 52, 40, 12
+    EDITTEXT IDC_EDIT_NAME, 60, 52, 220, 14, ES_AUTOHSCROLL
+    LTEXT "Branch:", -1, 10, 74, 40, 12
+    EDITTEXT IDC_EDIT_BRANCH, 60, 74, 220, 14, ES_AUTOHSCROLL
+    LTEXT "Year:", -1, 10, 96, 40, 12
+    EDITTEXT IDC_EDIT_YEAR, 60, 96, 60, 14, ES_AUTOHSCROLL
+    LTEXT "CGPA:", -1, 140, 96, 40, 12
+    EDITTEXT IDC_EDIT_CGPA, 190, 96, 90, 14, ES_AUTOHSCROLL
+    PUSHBUTTON "Save", IDC_EDIT_SAVE, 80, 130, 60, 20
+    PUSHBUTTON "Cancel", IDC_EDIT_CANCEL, 160, 130, 60, 20
+END
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// ABOUT DIALOG
+//
+IDD_ABOUT DIALOGEX 0, 0, 300, 160
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About SRMS"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT "SRMS - Student Record Management System(CCC)", -1, 10, 10, 280, 12
+    LTEXT "Built with C++ and Win32 API", -1, 10, 30, 280, 12
+    LTEXT "Author: B Navaneeth", -1, 10, 50, 280, 12
+    PUSHBUTTON "OK", IDOK, 120, 120, 60, 20
+END
